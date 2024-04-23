@@ -1,3 +1,5 @@
+package ar.edu.info.unlp.ejercicio6;
+
 public class Tierra extends Topografia{
 
     public Tierra(){

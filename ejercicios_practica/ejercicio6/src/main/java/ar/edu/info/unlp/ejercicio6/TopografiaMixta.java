@@ -1,3 +1,8 @@
+package ar.edu.info.unlp.ejercicio6;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class TopografiaMixta extends Topografia{
     List<Topografia> components;
 
@@ -13,8 +18,12 @@ public class TopografiaMixta extends Topografia{
         this.components.remove(component);
     }
 
+    public List<Topografia> getComponents(){
+        return this.components;
+    }
+
     public double getProporcionAgua(){
-        int totalAgua = this.components.stream()
+        double totalAgua = this.components.stream()
         .mapToDouble(component -> component.getProporcionAgua())
         .sum();
 
@@ -34,8 +43,8 @@ public class TopografiaMixta extends Topografia{
         Topografia component2;
 
         for(int i=0; i < this.components.size(); i++){
-            component1 = this.components(i);
-            component2 = topografiaMixta.components(i);
+            component1 = this.getComponents().get(i);
+            component2 = topografiaMixta.getComponents().get(i);
             if (!component1.isEqual(component2)){
                 return false;
             }
@@ -46,5 +55,9 @@ public class TopografiaMixta extends Topografia{
     public boolean isEqual(Topografia otraTopografia){
         return otraTopografia.isEqual(this);
     }
+
+   
+
+
 
 }

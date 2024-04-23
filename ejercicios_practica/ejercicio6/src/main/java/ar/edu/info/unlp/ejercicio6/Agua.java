@@ -1,3 +1,5 @@
+package ar.edu.info.unlp.ejercicio6;
+
 public class Agua extends Topografia{
 
     public Agua(){
@@ -18,5 +20,17 @@ public class Agua extends Topografia{
 
     public boolean isEqual(Topografia otraTopografia){
         return otraTopografia.isEqual(this);
+    }
+
+    @Override
+    public boolean isEqual(boolean b) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'isEqual'");
+    }
+
+    @Override
+    public boolean isEqual(TopografiaMixta mixta) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'isEqual'");
     }
 }
