@@ -43,5 +43,8 @@ public class TopografiaMixta extends Topografia{
         return true;
     }
 
+    public boolean isEqual(Topografia otraTopografia){
+        return otraTopografia.isEqual(this);
+    }
 
 }
